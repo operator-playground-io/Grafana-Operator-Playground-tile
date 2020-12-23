@@ -1,0 +1,23 @@
+{
+  "title": "Grafana Operator",
+  "description": "Grafana Operator",
+  "logo": "_images/SalesStack.png",
+  "enabled": true,
+  "category_label": [
+    "Operators"
+  ],
+  "document": "data-logging-stack",
+  "stack_id": "grafana-operator",
+  "type": "stack",
+  "categories": [
+    "Monitoring"
+  ],
+  "is_certified": true,
+  "has_support": true,
+  "has_dataset": false,
+  "has_api": false,
+  "git_url": "https://github.com/operator-playground-io/grafana-operator",
+  "git_commit": "3aeac9c7eba27263481ef68345b0c235a7068d6f",
+  "installTime": "5 minutes",
+  "isStacksSaved": true
+}

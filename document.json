@@ -1,0 +1,43 @@
+{
+  "name": "Grafana Operator",
+  "description": "Grafana Operator",
+  "logo": "_images/SalesStack.png",
+  "has_supporting_content": true,
+  "stack_id": "grafana-operator",
+  "type": "stack",
+  "categories": ["Monitoring"],
+  "platform": "Kubernetes",
+  "cover": "cover.md",
+  "meta": {
+    "Monitoring": ["Grafana"],
+    "Type":[
+         "Operators"
+      ],
+    "Install time": ["5 minutes"]
+  },
+"deployment_information": {
+  "Operator Project": "N/A",
+  "Deployment Namespace": "operators"
+},
+  "commands": [
+    {
+      "description": "Set Namespace",
+      "exec": "export GRAFANA_OPERATOR_NAMESPACE=my-grafana-operator"
+    },
+    {
+      "description": "Prepare Workspace",
+      "exec": "cd /home/student/projects && mkdir grafana-operator && cd grafana-operator"
+    },
+	{
+      "description": "Install Operator",
+      "exec": "kubectl create -f https://operatorhub.io/install/grafana-operator.yaml"
+    }
+  ],
+  "display": [
+    {
+      "name": "Developer Dashboard",
+      "url": "##DNS.host##/codeserver",
+      "enabled": true
+    }
+  ]
+}

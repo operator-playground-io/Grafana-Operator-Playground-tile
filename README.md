@@ -1,1 +1,1 @@
-# Grafana-Operator-Playground-tile
+# Grafana Operator
