@@ -5,7 +5,7 @@ Logged in to the Grafana UI and configure datasource.
 
 ![](_images/dashboard.png)
 
-### Configure Your DataSource :
+### Configure Your DataSource
 
 Data source could be a database(MySQL) or a collection of metrics(Prometheus).
 Here we will configure Grafana to connect MySQL database.In earlier steps we have created a database named "testdb" with a table: "Population".
