@@ -307,7 +307,7 @@ mariadb-server-5dccfb7b59-rwzqp               1/1     Running   0          16m
 
 ### Install Prometheus Operator and Create Instance of Prometheus Server and ServiceMonitor
 
-Step 5: 
+Step 5: If you have already installed Prometheus Operator and Created Instance of Prometheus Server and ServiceMonitor, you can skip this Step 5 else proceed with Step 5.
 
 - Install the Prometheus operator by running the following command:
 
@@ -530,7 +530,7 @@ http://##DNS.ip##:30100
 ### Install Grafana Operator and create Grafana Instance and Grafana NodePort Service
 
 
-Step 7 : If you already install with Grafana Operator and created Grafana Instance and Service you can skip this steps, else refer the Grafana Create Instance and Service tutorial tile in this tutorial.
+Step 7 : If you have already installed with Grafana Operator and created Grafana Instance and Service, you can skip this Step 7, else refer the "Grafana Instance Creation" tutorial.
 
 
 
@@ -633,7 +633,7 @@ Now you will be able to see the Dashboard like below:
 
 ### Configure Grafana Dashboard to visualise MariaDB monitoring metrics
 
-Please go to Grafana Dashboard tutorial
+Learn how to Configure Grafana Dashboard to visualise MariaDB monitoring metrics from this tutorial: "Grafana Dashboard". 
 
 
 
