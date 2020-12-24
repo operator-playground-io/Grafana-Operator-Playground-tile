@@ -39,7 +39,7 @@ Now database is connected, we can create a dashboard showing stats about the tes
 
 2. Click on "Dashboard settings". Give the dashboard Name and click on "Save".
 
-   ![](_images/rename-dashboard.png)
+   ![](_images/rename-dashboard.PNG)
 
 3. Give a meaningful Title to the Panel list such as "mariadb-database-metric".
   - Click on "Add panel". A new panel window will come.    
@@ -67,10 +67,10 @@ Now database is connected, we can create a dashboard showing stats about the tes
    FROM Population
 
    
-   ![](_images/edit-sql.png)
+   ![](_images/edit-sql.PNG)
    
   
-   ![](_images/query-db-to-get-metrics.png)
+   ![](_images/query-db-to-get-metrics.PNG)
 
 6. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
@@ -83,7 +83,7 @@ Now database is connected, we can create a dashboard showing stats about the tes
 You have now created your first panel with a dashboard with a Gauge like below:
 
 
-![](_images/mariadb-gauge-db-metrics-max-population.png)
+![](_images/mariadb-gauge-db-metrics-max-population.PNG)
 
 
 
@@ -124,7 +124,7 @@ Follow the standard way of adding a new Grafana graph :
 - Click on "General" option on left hand side. This will provide option to give a Title to the panel. 
    
       
-  ![](_images/panel_list_name.png)
+  ![](_images/panel_list_name.PNG)
 
 
 - Under the "Metrics" tab, select your "Prometheus" data source.
@@ -139,7 +139,7 @@ Follow the standard way of adding a new Grafana graph :
 
 - The following shows an example Prometheus graph configuration:
 
- ![](_images/metric-for-global-status-commands-total.png)
+ ![](_images/metric-for-global-status-commands-total.PNG)
 
 
 ### Conclusion 

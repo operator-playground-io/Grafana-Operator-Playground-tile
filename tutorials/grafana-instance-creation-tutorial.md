@@ -3,7 +3,7 @@ title: Grafana Instance Creation tutorial
 description: This tutorial explains how create Instances for your Grafana Operator.
 ---
 
-###  Create below yaml definition of the Custom Resource to create Grafana Instance
+###  Create below yaml definition of the Custom Resource to create Grafana Instance:
 
 ```execute
 cat <<'EOF' > GrafanaInstance.yaml
@@ -34,7 +34,7 @@ spec:
 EOF
 ```
 
-Execute below command to create Grafana instance
+Execute below command to create Grafana instance:
 
 ```execute
 kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
@@ -51,15 +51,17 @@ Check pods status:
 kubectl get pods -n my-grafana-operator
 ```
 
-Output:
+You will see a similar Output as below:
 
-```output
+
+```
 NAME                                  READY   STATUS    RESTARTS   AGE
 grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
 grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ```
 
-###  Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort
+###  Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort:
+
 
 ```execute
 cat <<'EOF' > GrafanaService.yaml
@@ -80,19 +82,19 @@ spec:
 EOF
 ```
 
-Execute below command to create Grafana Service
+Execute below command to create Grafana Service:
 
 ```execute
 kubectl create -f GrafanaService.yaml -n my-grafana-operator
 ```
 
-Find the port for NodePort service using command :
+Find the port for NodePort service using below command :
 
 ```execute
 kubectl get svc -n my-grafana-operator
 ```
 
-Output:
+You will see a similar Output as below:
 
 ```
 NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
@@ -118,7 +120,7 @@ Now click on the `Sign In` button as below :
 ![](_images/signin.png)
 
 
-You will now need to log in to Grafana Dashboard with the following credentials in the page below:
+You will now need to log-in to Grafana Dashboard with the following credentials:
 
 
 ```
