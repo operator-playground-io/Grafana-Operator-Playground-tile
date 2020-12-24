@@ -23,8 +23,10 @@ Lets take the example of MariaDB Server. Here, we will explain the monitoring of
 
 ### How to monitor MariaDB server using Prometheus 
 
-Step 1:  Install the MariaDB operator by running the following command:
+Step 1:  Install the MariaDB operator and MariaDB Server Instance by following below Step 1 and Step 2. 
+If you already have MariaDB Operator installed and created MariaDB Server instance, you can skip with Step 1 and Step 2.
 
+Install the MariaDB operator by running the following command:
 
 ```execute
 kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml             
