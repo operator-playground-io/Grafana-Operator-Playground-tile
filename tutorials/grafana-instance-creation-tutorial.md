@@ -3,7 +3,7 @@ title: Grafana Instance Creation tutorial
 description: This tutorial explains how create Instances for your Grafana Operator.
 ---
 
-###  Create below yaml definition of the Custom Resource to create Grafana Instance:
+###  Create below yaml definition of the Custom Resource to create Grafana Instance
 
 ```execute
 cat <<'EOF' > GrafanaInstance.yaml
@@ -60,7 +60,7 @@ grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
 grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ```
 
-###  Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort:
+###  Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort
 
 
 ```execute
