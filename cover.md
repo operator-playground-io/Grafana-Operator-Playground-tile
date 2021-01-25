@@ -20,13 +20,15 @@ The Operator can deploy and manage a Grafana instance on Kubernetes and OpenShif
 - Install Plugins (panels).
 
 ### Grafana Operator Architecture
+
+Grafana allows you to query, visualize and understand your metrics. 
+The data was pulled from Prometheus which was plugged-in to the Grafana dashboard as a data source. Queries were fired from the dashboard with different expressions such as min, avg etc.Grafana has native Prometheus support.It comes with a large number of inbuilt reusable dashboards to bring your data together and share it.
+
 A high level Prometheus & Grafana Architecture diagram is shown below :
 
 ![](_images/Grafana-Architecture.png)
 
 
-Grafana allows you to query, visualize and understand your metrics. 
-The data was pulled from Prometheus which was plugged-in to the Grafana dashboard as a data source. Queries were fired from the dashboard with different expressions such as min, avg etc.Grafana has native Prometheus support.It comes with a large number of inbuilt reusable dashboards to bring your data together and share it.
 
 ### Objective of tutorial
 
