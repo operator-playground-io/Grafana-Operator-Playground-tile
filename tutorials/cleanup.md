@@ -8,7 +8,7 @@ description: This tutorial explains how to cleanup Operator
 
 
 
-***Delete the operator's Custom Resources  by kubectl delete commands :***
+***Delete the operator's Custom Resources by kubectl delete commands :***
 
  
 Example:
@@ -18,7 +18,7 @@ Example:
  ```
 
 Note: Here GrafanaInstance.yaml is the Custom Resource  of the Grafana Server Instance.
-Similarly,delete all the Custom Resource s.
+Similarly,delete all the Custom Resources.
  
 
 ***Delete the operator by kubectl delete command:***
@@ -31,7 +31,7 @@ Similarly,delete all the Custom Resource s.
  ```
  
 
-***Deleting the CSV resource: ***
+***Deleting the CSV resource:***
 
 
 - Find the CSV in the namespace
