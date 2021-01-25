@@ -5,30 +5,36 @@
    "footer":"footer.md",
    "tutorials":[
       {
-         "description":" A User Guide for verification of Grafana Operator Installation",
+         "description":"Check Grafana Operator Installation Status",
          "duration":"5 min",
          "tutorial_name":"operator-installation-verification-tutorial.md",
-         "title":"Grafana Operator Installation Verification Tutorial"
+         "title":"1: Grafana Operator Installation Verification"
       },
       {
-         "description":" Grafana Instance Creation tutorial",
+         "description":" Learn how to create Grafana Instance",
          "duration":"15 min",
          "tutorial_name":"grafana-instance-creation-tutorial.md",
-         "title":"Grafana Instance Creation tutorial"
+         "title":"2: Grafana Instance Creation tutorial"
       },
       
       {
-         "description":"steps to enable monitoring using prometheus and check metrics on Grafana dashboard.",
+         "description":"Learn how to enable monitoring using prometheus and check metrics on Grafana dashboard.",
          "duration":"15 min",
          "tutorial_name":"monitoring-using-prometheus-grafana.md",
-         "title":"Monitoring using Prometheus and Grafana"
+         "title":"3: Monitoring using Prometheus and Grafana"
       },
       
       {
-         "description":" How to configure Grafana Dashboard to check metrics",
+         "description":" Learn how to configure Grafana Dashboard to check metrics",
          "duration":"15 min",
          "tutorial_name":"access-grafana-dashboard-to-check-metrics.md",
-         "title":"Grafana Dashboard"
+         "title":"4: Grafana Dashboard"
+      },
+      {
+         "description":"Steps to cleanup Operator",
+         "duration":"10 min",
+         "tutorial_name":"cleanup.md",
+         "title":"5: Cleanup Operator"
       }
       
       
