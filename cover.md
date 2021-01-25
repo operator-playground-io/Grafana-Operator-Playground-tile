@@ -14,11 +14,11 @@ Grafana runs as a process on your computer or server, and you access the interfa
 
 The Operator can deploy and manage a Grafana instance on Kubernetes and OpenShift. The following features are supported:
 
-- Install Grafana to a namespace
-- Configure Grafana through the custom resource
-- Import Grafana dashboards from the same or other namespaces
-- Import Grafana data sources from the same namespace
-- Install Plugins (panels)
+- Install Grafana to a namespace.
+- Configure Grafana through the custom resource.
+- Import Grafana dashboards from the same or other namespaces.
+- Import Grafana data sources from the same namespace.
+- Install Plugins (panels).
 
 ### Grafana Operator Architecture
 A high level Prometheus & Grafana Architecture diagram is shown below :
