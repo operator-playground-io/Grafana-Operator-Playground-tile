@@ -42,7 +42,7 @@ Example:
 kubectl get csv -n my-grafana-operator
 ```
 
-- Delete that CSV :
+- Delete the CSV :
 
 Example:
 
