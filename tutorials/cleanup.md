@@ -31,7 +31,8 @@ Similarly,delete all the Custom Resource s.
  ```
  
 
-***Deleting the CSV resource ***
+***Deleting the CSV resource: ***
+
 
 - Find the CSV in the namespace
 
