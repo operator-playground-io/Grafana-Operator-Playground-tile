@@ -119,6 +119,7 @@ mariadb.mariadb.persistentsys/mariadb created
 ```execute
 kubectl get pods -n my-mariadb-operator-app
 ```
+Wait till the Status of pods are "Running".
 
 You will see a similar Output as below:
 
