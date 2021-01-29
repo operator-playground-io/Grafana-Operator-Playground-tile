@@ -119,7 +119,6 @@ Now click on the `Sign In` button as below :
 
 You will now need to log-in to Grafana Dashboard with the following credentials:
 
-
 ```
 user: root
 password: secret
@@ -127,9 +126,7 @@ password: secret
 
 ![](_images/login.png)
 
-
 Now you will be able to see the Dashboard like below:
-
 
 ![](_images/dashboard.png)
 
