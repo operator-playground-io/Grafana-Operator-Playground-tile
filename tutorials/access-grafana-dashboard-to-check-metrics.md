@@ -12,22 +12,23 @@ Here we will configure Grafana to connect MySQL database.In earlier steps we hav
 
 ***Create your datasource as MySQL***
 
- Complete the web form with your connection details which will looks like below snapshot:
+ Complete the web form with your connection details given in below table:
  
- database: testdb 
+| Parameter   | Value                                   
+|--------------------------------
+| `Database`   | testdb    
+| `Username`   | root
+| `Password`   | password                                               |
+| `Host`       | ##DNS.ip##:30685 
  
- username: root 
- 
- password: password 
- 
- host : ##DNS.ip##:30685 
+
 
 ***Click on save and test***
 
  ![](_images/mysql-datasource-connection.PNG)
 
 
-If everything is configured correctly, you should see a green box with the message Database Connection OK.
+If everything is configured correctly, you should see a green box with the message "Database Connection OK".
 
 
 
