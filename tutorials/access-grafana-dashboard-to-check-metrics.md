@@ -14,12 +14,12 @@ Here we will configure Grafana to connect MySQL database.In earlier steps we hav
 
  Complete the web form with your connection details given in below table:
  
-| Parameter   | Value                                   
-|-----------------------
-| `Database`  | testdb    
-| `Username`  | root
-| `Password`  | password                                               |
-| `Host`      | ##DNS.ip##:30685 
+| Parameter  |  Value           |                                                   
+|-------------------------------|
+| `Host`     | ##DNS.ip##:30685 | 
+| `User`     | root             | 
+| `Password` | password         | 
+| `Database` | testdb           |
  
 
 
