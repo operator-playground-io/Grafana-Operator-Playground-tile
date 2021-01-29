@@ -13,12 +13,20 @@ description: This tutorial explains how to cleanup Operator
  
 Example:
  
- ```
+ ```execute
  kubectl delete -f GrafanaInstance.yaml -n my-grafana-operator
+ kubectl delete -f GrafanaService.yaml -n my-grafana-operator
+ kubectl delete -f MariaDBserver.yaml -n my-mariadb-operator-app
+ kubectl delete -f prometheusInstance.yaml -n operators
+ kubectl delete -f prometheus_service.yaml -n operators
+ kubectl delete -f MariaDBmonitoring.yaml -n my-mariadb-operator-app 
+ kubectl delete -f ServiceMonitor.yaml -n operator
+ kubectl delete -f prometheus-datasources.yaml -n my-grafana-operator
  ```
 
+ 
 Note: Here GrafanaInstance.yaml is the Custom Resource  of the Grafana Server Instance.
-Similarly,delete all the Custom Resources.
+
  
 
 ***Delete the operator by kubectl delete command:***
@@ -26,37 +34,27 @@ Similarly,delete all the Custom Resources.
  
  Example:
  
- ```
+ ```execute
  kubectl delete -f https://operatorhub.io/install/grafana-operator.yaml
+ kubectl delete -f https://operatorhub.io/install/prometheus.yaml
+ kubectl delete -f https://operatorhub.io/install/mariadb-operator-app.yaml
  ```
  
-
-***Deleting the CSV resource:***
-
-
-- Find the CSV in the namespace
-
-Example:
-
-```
-kubectl get csv -n my-grafana-operator
-```
-
-- Delete the CSV :
-
-Example:
-
-```
-kubectl delete csv/grafana-operator.v3.2.0 -n my-grafana-operator
-```
 
  
 ***Delete all the yaml files:***
  
  Example:
  
-  ```
-  rm -rf GrafanaInstance.yaml
-  ```
+ ```execute
+ rm -rf GrafanaInstance.yaml
+ rm -rf GrafanaService.yaml 
+ rm -rf MariaDBserver.yaml 
+ rm -rf prometheusInstance.yaml 
+ rm -rf prometheus_service.yaml
+ rm -rf MariaDBmonitoring.yaml 
+ rm -rf ServiceMonitor.yaml 
+ rm -rf prometheus-datasources.yaml
+```
   
 
