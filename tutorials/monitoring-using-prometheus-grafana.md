@@ -190,7 +190,7 @@ use testdb;
 create table Population(year numeric,population numeric);
 ```
 
-- Insert few datas into the table so that we can check MariaDB mySQL metrics from Grafana Dashboard.
+- Insert few data into the table so that we can check MariaDB mySQL metrics from Grafana Dashboard.
 
 ```execute
 insert into Population values(2017,1380004385 );
