@@ -119,7 +119,7 @@ mariadb.mariadb.persistentsys/mariadb created
 ```execute
 kubectl get pods -n my-mariadb-operator-app
 ```
-Wait till the Status of pods are "Running".
+Wait till the STATUS of pods are "Running".
 
 You will see a similar Output as below:
 
@@ -191,7 +191,7 @@ use testdb;
 create table Population(year numeric,population numeric);
 ```
 
-- Insert few data into the table so that we can check MariaDB mySQL metrics from Grafana Dashboard.
+- Insert data into the table so that we can check MariaDB mySQL metrics from Grafana Dashboard.
 
 ```execute
 insert into Population values(2017,1380004385 );
