@@ -1,7 +1,7 @@
 {
   "name": "Grafana Operator",
   "description": "Grafana Operator",
-  "logo": "_images/SalesStack.png",
+  "logo": "_images/grafana-logo-2.png",
   "has_supporting_content": true,
   "stack_id": "grafana-operator",
   "type": "stack",
@@ -17,18 +17,10 @@
   },
 "deployment_information": {
   "Operator Project": "N/A",
-  "Deployment Namespace": "operators"
+  "Deployment Namespace": "my-grafana-operator"
 },
   "commands": [
     {
-      "description": "Set Namespace",
-      "exec": "export GRAFANA_OPERATOR_NAMESPACE=my-grafana-operator"
-    },
-    {
-      "description": "Prepare Workspace",
-      "exec": "cd /home/student/projects && mkdir grafana-operator && cd grafana-operator"
-    },
-	{
       "description": "Install Operator",
       "exec": "kubectl create -f https://operatorhub.io/install/grafana-operator.yaml"
     }
