@@ -271,7 +271,7 @@ spec:
 EOF
 ```
 
-Note: The database host and port should be correct for metrics to work. Host will be cluster IP and the port will be mariadb-service port(see Step 4).
+Note: The database host and port should be correct for metrics to work. Host will be IP of the Cluster and the port will be mariadb-service port(see Step 4).
 
 
 - Execute below command to Create Instance of Monitoring 
