@@ -103,12 +103,9 @@ grafana-service            ClusterIP   10.103.93.116    <none>        3000/TCP  
 grafana-svc                NodePort    10.101.178.187   <none>        3000:30200/TCP   3s
 ```
 
-The nodePort from above output is : 30200
+From above output NodePort is : 30200
 
-We can access the Grafana dashboard on the nodePort : 30200 using below url:
-
-
-Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard from your browser.
+Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard. 
 
 
 You will see the Grafana page loading as below :
