@@ -25,9 +25,7 @@ Example:
  ```
 
  
-Note: Here GrafanaInstance.yaml is the Custom Resource  of the Grafana Server Instance.
 
- 
 
 ***Delete the operator by kubectl delete command:***
  
