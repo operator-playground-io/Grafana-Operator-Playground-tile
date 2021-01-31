@@ -82,56 +82,32 @@ Click on the "dashboard settings" icon.
 
 ![](_images/add-panel-name.png)
 
-7. Select data source as "MYSQL" and click on "Edit SQL".
+7. From "Query" dropdown choose "MySQL" and click on "Edit SQL".
 
 ![](_images/query-mysql.png)
 
-8. 
-
-
-Give a meaningful Title to the Panel list such as "mariadb-database-metric".
-  -    
-  - Click on "Add Query".  
-   
-  ![](_images/add-panel.png) 
-  
-  - Click on "General" option on left hand side. This will provide option to give a Title to the panel.
-  
-  ![](_images/general-option.png)
-     
-    
-  ![](_images/panel-name.png)
-
-4. From "Query" dropdown choose "MySQL".
-    
-   
-   ![](_images/add-datasource-as-mysql.png)
-
-5. Click on "Edit SQL".Add below query to fetch data from table "Population" from database "testdb":
-   
+8.Add below query to fetch data from table "Population" from database "testdb":      
    
    SELECT
      year as Year,population as Population
    FROM Population
-
    
-   ![](_images/edit-sql.png)
-   
-  
-   ![](_images/query-db-to-get-metrics.png)
+9. Select "Format as":"Table" and run the query by Shift+Enter.Refer below snapshot:
 
-6. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
+![](_images/mysql-query-to-get-mariadb-metrics.png)
 
-  ![](_images/visualization.png)
+10. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
-7. According to the type of metrics we need to choose appropriate Visualization form. In this example we are using "Gauge" to see the MariaDB "testdb" database table:    "Population" data.
+According to the type of metrics we need to choose appropriate Visualization form. 
 
-8. In calc option you can use the appropriate function to view the data.In below snapshot we are using "max" to check maximum population with the year details.
+In this example we are using "Gauge" to see the metrics of MariaDB.
+
+
+11. In Calculation option, you can use the appropriate function to view the data.In below snapshot we are using "Max" to check maximum population with the year details.
 
 You have now created your first panel with a dashboard with a Gauge like below:
 
-
-![](_images/mariadb-gauge-db-metrics-max-population.png)
+![](_images/mariadb-metric-mysql-maxvalpopulation.png)
 
 
 
