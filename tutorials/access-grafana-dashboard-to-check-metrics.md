@@ -1,18 +1,30 @@
 
 ### Access Grafana Dashboard and configure it to show metrics
 
-Logged in to the Grafana UI and configure datasource.
+Once you logged in to the Grafana dashboard, you will see dashboard as below snapshot:
 
 ![](_images/dashboard.png)
 
 ### Configure Your DataSource
 
+We are going to configure DataSource.
 Data source could be a database(MySQL) or a collection of metrics(Prometheus).
-Here we will configure Grafana to connect MySQL database.In earlier steps we have created a database named "testdb" with a table: "Population".
+In earlier steps we have created a database named "testdb" with a table: "Population".
+Here we will configure Grafana to connect MySQL with the DB and table.
 
 ***Create your datasource as MySQL***
 
- Complete the web form with your connection details given in below table:
+***Steps:***
+
+1. Click on the Option "DATA SOURCES" shown on Home Page of dashboard.See below snapshot for reference:
+
+ ![](_images/configure-datasource.png)
+ 
+2. Type "MYSQL" in the search box.Then click on "Select" option of MYSQL datasource.See below snapshot for reference:
+
+![](_images/add-data-source-mysql-select.png)
+
+3. Complete the Data Sources/MYSQL web form with your connection details given in below table:
  
 ``` 
 | Parameter  |    Value            |                                                   
@@ -23,8 +35,7 @@ Here we will configure Grafana to connect MySQL database.In earlier steps we hav
 | `Database` |   testdb            |
 ``` 
 
-
-***Click on save and test***
+4. Click on save and test.
 
  ![](_images/mysql-datasource-connection.PNG)
 
@@ -35,15 +46,29 @@ If everything is configured correctly, you should see a green box with the messa
 
 ### Create Your First Dashboard
 
-Now database is connected, we can create a dashboard showing stats about the testdb database we are connected in the previous section.
+Now database is connected, we can create a dashboard showing stats about the "testdb" database.
 
-1. Click on New dashboard.
 
-2. Click on "Dashboard settings". Give the dashboard Name and click on "Save".
+1. Click on the Dashboards Home.See below snapshot for reference:
 
-   ![](_images/rename-dashboard.png)
+![](_images/dashboard-home-option.png)
 
-3. Give a meaningful Title to the Panel list such as "mariadb-database-metric".
+You will see dashboard like this:
+
+![](_images/create-new-dashboard.png)
+
+2. Click on "DASHBOARDS" to create dashboard.You will see "New dashboard" Option as below:
+
+![](_images/dashboard-setting-option.png)
+
+Click on the "dashboard settings" icon.
+
+3. Give a meaningful dashboard Name and click on "Save dashboard".See below snapshot for reference:
+
+
+![](_images/Dashboard-name-setting.png)
+
+4. Give a meaningful Title to the Panel list such as "mariadb-database-metric".
   - Click on "Add panel". A new panel window will come.    
   - Click on "Add Query".  
    
