@@ -45,6 +45,9 @@ You will see the following resources created:
 grafana.integreatly.org/example-grafana created
 ```
 
+Please wait till Pod STATUS will be "Running" and then proceed further.
+
+
 Check pods status:
 
 ```execute
@@ -52,7 +55,6 @@ kubectl get pods -n my-grafana-operator
 ```
 
 You will see a similar Output as below:
-
 
 ```
 NAME                                  READY   STATUS    RESTARTS   AGE
