@@ -422,6 +422,9 @@ prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          14m
 prometheus-server-0                    3/3     Running   1          40s
 ```
 
+Note: Please wait till Pod STATUS will be "Running" and then proceed further.
+
+
 - Create below yaml definition of the Custom Resource to create the service NodePort to access prometheus server:
 
 
