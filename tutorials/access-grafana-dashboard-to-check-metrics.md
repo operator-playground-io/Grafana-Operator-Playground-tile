@@ -68,8 +68,29 @@ Click on the "dashboard settings" icon.
 
 ![](_images/Dashboard-name-setting.png)
 
-4. Give a meaningful Title to the Panel list such as "mariadb-database-metric".
-  - Click on "Add panel". A new panel window will come.    
+4.  Click on "Add panel" as shown in below snapshot. "Add new panel window" will come. 
+
+![](_images/Add-Panel-option.png)
+
+
+5. Click on "Add new panel" option as shown in below snapshot:
+
+
+![](_images/Add-new-panel-mysql.png)
+
+6. Edit Panel window will appear. Provide a meaningful name in the "Panel title" as shown in below snapshot:
+
+![](_images/add-panel-name.png)
+
+7. Select data source as "MYSQL" and click on "Edit SQL".
+
+![](_images/query-mysql.png)
+
+8. 
+
+
+Give a meaningful Title to the Panel list such as "mariadb-database-metric".
+  -    
   - Click on "Add Query".  
    
   ![](_images/add-panel.png) 
