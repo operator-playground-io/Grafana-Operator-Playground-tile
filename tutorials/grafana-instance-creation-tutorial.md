@@ -111,6 +111,7 @@ Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##
 
 
 You will see the Grafana page loading as below :
+
 ![](_images/load.png)
 
 Now click on the `Sign In` button as below :
