@@ -38,6 +38,7 @@ kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml
 ```execute
 kubectl get csv -n my-mariadb-operator-app
 ```
+Note: Please wait till PHASE status will be "Succeeded" and then proceed further.
 
 You will see a similar Output as below:
 
@@ -339,6 +340,8 @@ You will see a similar Output as below:
 NAME                        DISPLAY               VERSION   REPLACES                    PHASE
 prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0.32.0   Succeeded
 ```
+
+Note:Please wait till PHASE status will be "Succeeded" and then proceed further.
 
 From above output, once operator is successfully installed, **PHASE** will be as "Succeeded" 
 
