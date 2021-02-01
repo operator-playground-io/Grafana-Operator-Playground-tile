@@ -127,31 +127,47 @@ You will see dashboard like this:
 
 ![](_images/create-new-dashboard.png)
 
-2. Click on the "cogwheel" in the sidebar to open the Configuration menu.
+2.Click on "DASHBOARDS" to create dashboard.You will see "New dashboard" Option as below:
 
-- Click on "Data Sources".
+![](_images/dashboard-setting-option.png)
 
- ![](_images/prometheus-datasource-config-option.png)
+Click on the "dashboard settings" icon.
 
-- Click on "Add data source".
+3. Give a meaningful dashboard Name and click on "Save dashboard".See below snapshot for reference:
 
-- Select "Prometheus" as the type.
 
-- Set the appropriate Prometheus server URL : http://prometheus-operated.operators:9090 as mentioned in Grafana datasource yaml file: prometheus-datasources.yaml
+![](_images/create-new-datasource-prom.png)
+ 
+3. You will see "Add data source" on the UI.Type "Prometheus" in the search box and click on "Select" button.See below snapshot for reference:
 
-- Click "Save & Test" to save the new data source.
+![](_images/prometheus-data-source.png)
+
+4. In the Data Sources/Prometheus web form set the appropriate Prometheus server URL : http://prometheus-operated.operators:9090. 
+   This URL is mentioned in Grafana datasource yaml file: prometheus-datasources.yaml 
+
+5. Click "Save & Test" to save the new data source.
   
   
- ![](_images/prometheus-datasource.PNG)
+ ![](_images/prometheus-datasource-configuration.png)
+ 
+ 
+ If everything is configured correctly, you should see a green box with the message "Data source is working".
+ 
+ ![](_images/prometheus-configuration-success.png)
   
 
 ###  Creating a Prometheus graph
 
+Now Prometheus Data Source is configured, we can create a dashboard showing stats about the Prometheus monitoring metrics for MariaDB Server.
+
 Follow the standard way of adding a new Grafana graph :
 
-- Click on New dashboard.
+1. Click on the Dashboards Home.See below snapshot for reference:
 
-- Click on "Dashboard settings".Give dashboard Name and click on "Save".
+![](_images/dashboard-home-option.png)
+
+
+2. Click on "Dashboard settings".Give dashboard Name and click on "Save".
 
  ![](_images/Dashboard-name-setting.png)
 
