@@ -20,7 +20,7 @@ Example:
  kubectl delete -f prometheusInstance.yaml -n operators
  kubectl delete -f prometheus_service.yaml -n operators
  kubectl delete -f MariaDBmonitoring.yaml -n my-mariadb-operator-app 
- kubectl delete -f ServiceMonitor.yaml -n operator
+ kubectl delete -f ServiceMonitor.yaml -n operators
  kubectl delete -f prometheus-datasources.yaml -n my-grafana-operator
  ```
 
