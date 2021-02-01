@@ -35,7 +35,7 @@ Here we will configure Grafana to connect MySQL with the DB and table.
 | Database  |   testdb               |
 ``` 
 
-4. Click on save and test.
+4. Click on "Save & Test".
 
  ![](_images/mysql-datasource-connection.PNG)
 
