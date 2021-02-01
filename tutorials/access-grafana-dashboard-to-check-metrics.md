@@ -29,7 +29,7 @@ Here we will configure Grafana to connect MySQL with the DB and table.
 ``` 
 | Parameter |    Value               |                                                   
 |-----------|------------------------|
-| Host      |   ##DNS.ip##:30685     | 
+| Host      |   ##DNS.ip##:30685  | 
 | User      |   root                 | 
 | Password  |   password             | 
 | Database  |   testdb               |
