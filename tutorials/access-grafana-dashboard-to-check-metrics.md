@@ -40,7 +40,7 @@ Here we will configure Grafana to connect MySQL with the DB and table.
  ![](_images/mysql-datasource-connection.PNG)
 
 
-If everything is configured correctly, you should see a green box with the message "Database Connection OK".
+  If everything is configured correctly, you should see a green box with the message "Database Connection OK".
 
 
 
@@ -54,7 +54,7 @@ Now database is connected, we can create a dashboard showing stats about the "te
 
 ![](_images/dashboard-home-option.png)
 
-You will see dashboard like this:
+   You will see dashboard like this:
 
 ![](_images/create-new-dashboard.png)
 
@@ -62,14 +62,14 @@ You will see dashboard like this:
 
 ![](_images/dashboard-setting-option.png)
 
-Click on the "dashboard settings" icon.
+   Click on the "dashboard settings" icon.
 
 3. Give a meaningful dashboard Name and click on "Save dashboard".See below snapshot for reference:
 
 
 ![](_images/Dashboard-name-setting.png)
 
-4.  Click on "Add panel" as shown in below snapshot. "Add new panel window" will come. 
+4. Click on "Add panel" as shown in below snapshot. "Add new panel window" will come. 
 
 ![](_images/Add-Panel-option.png)
 
@@ -87,7 +87,7 @@ Click on the "dashboard settings" icon.
 
 ![](_images/query-mysql.png)
 
-8.Add below query to fetch data from table "Population" from database "testdb":      
+8. Add below query to fetch data from table "Population" from database "testdb":      
    
    SELECT
      year,
@@ -100,16 +100,16 @@ Click on the "dashboard settings" icon.
 
 10. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
-According to the type of metrics,we need to choose appropriate Visualization form. 
+    According to the type of metrics,we need to choose appropriate Visualization form. 
 
-In this example we are using "Gauge" to see the metrics of MariaDB.
+    In this example we are using "Gauge" to see the metrics of MariaDB.
 
 
-11. Under "Display" section,using Calculation option you can use the appropriate function to view the data.In below snapshot we are using "Max" to check maximum population with the year details.
+11. Under "Display" section,using Calculation option you can use the appropriate function to view the data.In below snapshot we are using "Max" to check maximum population with     the year details.
 
 12. Click on "Apply" button.
 
-You have now created your first panel with a dashboard with a Gauge like below:
+    You have now created your first panel with a dashboard with a Gauge like below:
 
 ![](_images/mariadb-metric-mysql-maxvalpopulation.png)
 
@@ -123,15 +123,15 @@ To create a Prometheus data source in Grafana follow the below steps:
 
 ![](_images/dashboard-home-option.png)
 
-You will see dashboard like this:
+  You will see dashboard like this:
 
 ![](_images/create-new-dashboard.png)
 
-2.Click on "DASHBOARDS" to create dashboard.You will see "New dashboard" Option as below:
+2. Click on "DASHBOARDS" to create dashboard.You will see "New dashboard" Option as below:
 
 ![](_images/dashboard-setting-option.png)
 
-Click on the "dashboard settings" icon.
+  Click on the "dashboard settings" icon.
 
 3. Give a meaningful dashboard Name and click on "Save dashboard".See below snapshot for reference:
 
@@ -151,7 +151,7 @@ Click on the "dashboard settings" icon.
  ![](_images/prometheus-datasource-configuration.png)
  
  
- If everything is configured correctly, you should see a green box with the message "Data source is working".
+   If everything is configured correctly, you should see a green box with the message "Data source is working".
  
  ![](_images/prometheus-configuration-success.png)
   
@@ -166,7 +166,7 @@ Follow the standard way of adding a new Grafana graph :
 
 ![](_images/dashboard-home-option.png)
 
-You will see dashboard like this:
+  You will see dashboard like this:
 
 ![](_images/create-new-dashboard.png)
 
@@ -174,7 +174,7 @@ You will see dashboard like this:
 
 ![](_images/dashboard-setting-option.png)
 
-Click on the "dashboard settings" icon.
+   Click on the "dashboard settings" icon.
 
 3. Give a meaningful dashboard Name and click on "Save dashboard".See below snapshot for reference:
 
