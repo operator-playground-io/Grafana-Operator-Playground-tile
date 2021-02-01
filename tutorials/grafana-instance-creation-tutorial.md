@@ -120,7 +120,7 @@ Now click on the `Sign In` button as below :
 ![](_images/signin.png)
 
 
-You will now need to log-in to Grafana Dashboard with the following credentials:
+Log-in to Grafana Dashboard with the following credentials:
 
 ```
 user: root
