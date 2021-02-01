@@ -58,7 +58,7 @@ Now database is connected, we can create a dashboard showing stats about the "te
 
 ![](_images/create-new-dashboard.png)
 
-2. Click on "DASHBOARDS" to create dashboard.You will see "New dashboard" Option as below:
+2. Click on "DASHBOARDS" to create dashboard.You will see "New dashboard" window as below:
 
 ![](_images/dashboard-setting-option.png)
 
@@ -69,7 +69,7 @@ Now database is connected, we can create a dashboard showing stats about the "te
 
 ![](_images/Dashboard-name-setting.png)
 
-4. Click on "Add panel" as shown in below snapshot. "Add new panel window" will come. 
+4. Click on "Add panel" as shown in below snapshot. "Add new panel" window will come. 
 
 ![](_images/Add-Panel-option.png)
 
@@ -107,9 +107,9 @@ Now database is connected, we can create a dashboard showing stats about the "te
 
 11. Under "Display" section,using Calculation option you can use the appropriate function to view the data.In below snapshot we are using "Max" to check maximum population with     the year details.
 
-12. Click on "Apply" button.
+12. Click on "Apply" button.This will save your panel metric on dashboard.
 
-    You have now created your first panel with a dashboard with a Gauge like below:
+    You have now created your first panel with a dashboard with a "Gauge" like below:
 
 ![](_images/mariadb-metric-mysql-maxvalpopulation.png)
 
@@ -117,7 +117,7 @@ Now database is connected, we can create a dashboard showing stats about the "te
 
 ### Creating a Prometheus data source
 
-To create a Prometheus data source in Grafana follow the below steps:
+To create a Prometheus data source in Grafana follow below steps:
 
 1. Click on the Dashboards Home.See below snapshot for reference:
 
@@ -174,14 +174,14 @@ Follow the standard way of adding a new Grafana graph :
 
 ![](_images/dashboard-setting-option.png)
 
-   Click on the "dashboard settings" icon.
+   Click on the "Dashboard settings" option.
 
 3. Give a meaningful dashboard Name and click on "Save dashboard".See below snapshot for reference:
 
 
 ![](_images/new-dashboard-name-prometheus.png)
 
-4.  Click on "Add panel" as shown in below snapshot. "Add new panel window" will come. 
+4.  Click on "Add panel" as shown in below snapshot. "Add new panel" window will come. 
 
 ![](_images/add-panel-prom.png)
 
