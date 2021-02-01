@@ -1,7 +1,7 @@
 {
   "name": "Grafana Operator",
   "description": "Grafana Operator",
-  "logo": "_images/grafana-logo-2.png",
+  "logo": "_images/grafana-logo-3.png",
   "has_supporting_content": true,
   "stack_id": "grafana-operator",
   "type": "stack",
