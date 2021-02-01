@@ -38,7 +38,23 @@ Example:
  kubectl delete -f https://operatorhub.io/install/mariadb-operator-app.yaml
  ```
  
+***Deleting the CSV resource ***
 
+- Find the Prometheus CSV in the namespace "Operators"
+
+Example:
+
+```
+kubectl get csv -n operators
+```
+
+- Delete that CSV :
+
+Example:
+
+```
+kubectl delete csv/prometheusoperator.0.37.0 -n operators
+```
  
 ***Delete all the yaml files:***
  
