@@ -48,6 +48,7 @@ If everything is configured correctly, you should see a green box with the messa
 
 Now database is connected, we can create a dashboard showing stats about the "testdb" database.
 
+***Steps:***
 
 1. Click on the Dashboards Home.See below snapshot for reference:
 
@@ -89,21 +90,24 @@ Click on the "dashboard settings" icon.
 8.Add below query to fetch data from table "Population" from database "testdb":      
    
    SELECT
-     year as Year,population as Population
+     year,
+     population
    FROM Population
    
-9. Select "Format as":"Table" and run the query by Shift+Enter.Refer below snapshot:
+9. Select "Format as":"Table" and run the query by "Shift+Enter".Refer below snapshot:
 
 ![](_images/mysql-query-to-get-mariadb-metrics.png)
 
 10. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
-According to the type of metrics we need to choose appropriate Visualization form. 
+According to the type of metrics,we need to choose appropriate Visualization form. 
 
 In this example we are using "Gauge" to see the metrics of MariaDB.
 
 
 11. In Calculation option, you can use the appropriate function to view the data.In below snapshot we are using "Max" to check maximum population with the year details.
+
+12. Click on "Apply" button.
 
 You have now created your first panel with a dashboard with a Gauge like below:
 
@@ -113,9 +117,17 @@ You have now created your first panel with a dashboard with a Gauge like below:
 
 ### Creating a Prometheus data source
 
-To create a Prometheus data source in Grafana:
+To create a Prometheus data source in Grafana follow the below steps:
 
-- Click on the "cogwheel" in the sidebar to open the Configuration menu.
+1. Click on the Dashboards Home.See below snapshot for reference:
+
+![](_images/dashboard-home-option.png)
+
+You will see dashboard like this:
+
+![](_images/create-new-dashboard.png)
+
+2. Click on the "cogwheel" in the sidebar to open the Configuration menu.
 
 - Click on "Data Sources".
 
