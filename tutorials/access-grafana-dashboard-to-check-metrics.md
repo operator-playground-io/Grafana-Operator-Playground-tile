@@ -27,12 +27,12 @@ Here we will configure Grafana to connect MySQL with the DB and table.
 3. Complete the Data Sources/MYSQL web form with your connection details given in below table:
  
 ``` 
-| Parameter |    Value            |                                                   
-|-----------|---------------------|
-| Host      | ##DNS.ip##:30685    | 
-| User      |   root              | 
-| Password  |   password          | 
-| Database  |   testdb            |
+| Parameter |    Value               |                                                   
+|-----------|------------------------|
+| Host      | ##DNS.ip##:30685       | 
+| User      |   root                 | 
+| Password  |   password             | 
+| Database  |   testdb               |
 ``` 
 
 4. Click on save and test.
@@ -196,13 +196,13 @@ Click on the "dashboard settings" icon.
 ![](_images/add-panel-name.png)
 
 
-7. From "Query" dropdown, select your "Prometheus" data source.
+7. From "Query" dropdown, select your "Prometheus" data source.Please refer snapshot given in step 9.
 
 
 8. Enter any Prometheus query in the "Metric" field to lookup metrics via autocompletion.
    For example: we are executing query : "mysql_global_status_commands_total"  
-  
-
+   Please refer snapshot given in step 9.
+ 
 9. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
    According to the type of metrics,we need to choose appropriate Visualization form. 
@@ -217,9 +217,9 @@ Click on the "dashboard settings" icon.
 
    Click on "Apply" button.
     
-11. The following shows an example MariaDB Server Metrics graph and its configuration:
+   You have now created your dashboard with Graph like below:
 
- ![](_images/metric-for-global-status-commands-total.png)
+![](_images/monitoring-graph-prometheus.png)
 
 
 ### Conclusion 
