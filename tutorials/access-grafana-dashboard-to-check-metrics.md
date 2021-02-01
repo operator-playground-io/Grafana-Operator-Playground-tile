@@ -27,12 +27,12 @@ Here we will configure Grafana to connect MySQL with the DB and table.
 3. Complete the Data Sources/MYSQL web form with your connection details given in below table:
  
 ``` 
-| Parameter  |    Value            |                                                   
-|------------|---------------------|
-| `Host`     | ##DNS.ip##:30685    | 
-| `User`     |   root              | 
-| `Password` |   password          | 
-| `Database` |   testdb            |
+| Parameter |    Value            |                                                   
+|-----------|---------------------|
+| Host      | ##DNS.ip##:30685    | 
+| User      |   root              | 
+| Password  |   password          | 
+| Database  |   testdb            |
 ``` 
 
 4. Click on save and test.
@@ -105,7 +105,7 @@ According to the type of metrics,we need to choose appropriate Visualization for
 In this example we are using "Gauge" to see the metrics of MariaDB.
 
 
-11. In Calculation option, you can use the appropriate function to view the data.In below snapshot we are using "Max" to check maximum population with the year details.
+11. Under "Display" section,using Calculation option you can use the appropriate function to view the data.In below snapshot we are using "Max" to check maximum population with the year details.
 
 12. Click on "Apply" button.
 
@@ -166,30 +166,58 @@ Follow the standard way of adding a new Grafana graph :
 
 ![](_images/dashboard-home-option.png)
 
+You will see dashboard like this:
 
-2. Click on "Dashboard settings".Give dashboard Name and click on "Save".
+![](_images/create-new-dashboard.png)
 
- ![](_images/Dashboard-name-setting.png)
+2. Click on "DASHBOARDS" to create dashboard.You will see "New dashboard" Option as below:
 
-- Click the "Panel Title", then click "Edit".
+![](_images/dashboard-setting-option.png)
 
-- Click on "General" option on left hand side. This will provide option to give a Title to the panel. 
-   
-      
-  ![](_images/panel_list_name.png)
+Click on the "dashboard settings" icon.
 
-
-- Under the "Metrics" tab, select your "Prometheus" data source.
+3. Give a meaningful dashboard Name and click on "Save dashboard".See below snapshot for reference:
 
 
-- Enter any Prometheus expression into the "Query" field, while using the "Metric" field to lookup metrics via autocompletion.
-  For example say here we are executing query : "mysql_global_status_commands_total"  
+![](_images/new-dashboard-name-prometheus.png)
+
+4.  Click on "Add panel" as shown in below snapshot. "Add new panel window" will come. 
+
+![](_images/add-panel-prom.png)
+
+
+5. Click on "Add new panel" option as shown in below snapshot:
+
+
+![](_images/add-new-panel-prom.png)
+
+6. Edit Panel window will appear. Provide a meaningful name in the "Panel title" as shown in below snapshot:
+
+![](_images/add-panel-name.png)
+
+
+7. From "Query" dropdown, select your "Prometheus" data source.
+
+
+8. Enter any Prometheus query in the "Metric" field to lookup metrics via autocompletion.
+   For example: we are executing query : "mysql_global_status_commands_total"  
   
 
-- Tune other graph settings using "Visualization" option until you have a working graph.
+9. Click on "Visualization" option to see metrics on different options like : Graph, Gauge, Bar Gauge etc.
 
+   According to the type of metrics,we need to choose appropriate Visualization form. 
 
-- The following shows an example Prometheus graph configuration:
+   In this example we are using "Graph" to see the metrics of MariaDB.
+
+![](_images/monitoring-graph-prometheus.png)
+
+10. Under "Display" section you can use the appropriate setting to view the graph in effective way.Please refer below snapshot for display section.
+
+![](_images/monitoring-graph-display-settings-prom.png)
+
+   Click on "Apply" button.
+    
+11. The following shows an example MariaDB Server Metrics graph and its configuration:
 
  ![](_images/metric-for-global-status-commands-total.png)
 
