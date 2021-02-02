@@ -55,6 +55,8 @@ Example:
 ```
 kubectl delete csv/prometheusoperator.0.37.0 -n operators
 ```
+
+Note: The csv value may be different from above value.In the above delete csv command,Use the csv retrived by kubectl get csv command.  
  
 ***Delete all the yaml files:***
  
