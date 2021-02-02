@@ -138,14 +138,14 @@ To create a Prometheus data source in Grafana follow below steps:
 
 ![](_images/create-new-datasource-prom.png)
  
-3. You will see "Add data source" on the UI.Type "Prometheus" in the search box and click on "Select" button.See below snapshot for reference:
+4. You will see "Add data source" on the UI.Type "Prometheus" in the search box and click on "Select" button.See below snapshot for reference:
 
 ![](_images/prometheus-data-source.png)
 
-4. In the Data Sources/Prometheus web form set the appropriate Prometheus server URL : http://prometheus-operated.operators:9090. 
+5. In the Data Sources/Prometheus web form set the appropriate Prometheus server URL : http://prometheus-operated.operators:9090. 
    This URL is mentioned in Grafana datasource yaml file: prometheus-datasources.yaml 
 
-5. Click "Save & Test" to save the new data source.
+6. Click "Save & Test" to save the new data source.
   
   
  ![](_images/prometheus-datasource-configuration.png)
