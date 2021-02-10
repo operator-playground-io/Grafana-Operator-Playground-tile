@@ -12,7 +12,7 @@
   "categories": [
     "Monitoring"
   ],
-  "is_certified": true,
+  "is_certified": false,
   "has_support": true,
   "has_dataset": false,
   "has_api": false,
