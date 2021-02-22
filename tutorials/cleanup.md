@@ -8,7 +8,7 @@ description: This tutorial explains how to cleanup the Operator
 
 
 
-***Delete the operator's Custom Resources by kubectl delete commands :***
+**Delete the operator's Custom Resources by kubectl delete commands :**
 
  
 Example:
