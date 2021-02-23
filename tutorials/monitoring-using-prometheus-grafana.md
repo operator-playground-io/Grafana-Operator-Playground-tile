@@ -20,6 +20,7 @@ Let’s take the example of MariaDB server and see how Prometheus performs the m
 ### Monitoring MariaDB server using Prometheus
 
 To monitor the MariaDB server using Prometheus, you need to first install the MariaDB operator and MariaDB server instance by following Step 1 and Step 2 as below. 
+
 You can ignore these steps if you already have MariaDB operator installed and have created the MariaDB Server instance.
 
 
