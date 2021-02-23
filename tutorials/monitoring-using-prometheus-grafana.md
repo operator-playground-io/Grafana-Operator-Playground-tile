@@ -55,7 +55,7 @@ Note: Once operator is successfully installed, Output PHASE should be as "Succee
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                               READY   STATUS    RESTARTS   AGE
@@ -123,7 +123,7 @@ kubectl get pods -n my-mariadb-operator-app
 
 **Wait until the STATUS of Pods is "Running".**
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                               READY   STATUS    RESTARTS   AGE
@@ -284,7 +284,6 @@ kubectl create -f MariaDBmonitoring.yaml -n my-mariadb-operator-app
 
 Output:
 
-
 ```
 monitor.mariadb.persistentsys/mariadb-monitor created
 ```
@@ -293,7 +292,7 @@ This will start Prometheus exporter pod and service.
 
 
 
-- **Check the pods status.**
+- **Check the Pods status.**
 
 
 ```execute
