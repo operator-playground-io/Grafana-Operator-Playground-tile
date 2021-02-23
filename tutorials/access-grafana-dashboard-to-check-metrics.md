@@ -12,9 +12,9 @@ Data source could be a database(MySQL) or a collection of metrics(Prometheus).
 In earlier steps we have created a database named "testdb" with a table: "Population".
 Here we will configure Grafana to connect MySQL with the DB and table.
 
-***Create your datasource as MySQL***
+**Create your datasource as MySQL**
 
-***Steps:***
+**Steps:**
 
 1. Click on the Option "DATA SOURCES" shown on Home Page of dashboard.See below snapshot for reference:
 
@@ -48,7 +48,7 @@ Here we will configure Grafana to connect MySQL with the DB and table.
 
 Now database is connected, we can create a dashboard showing stats about the "testdb" database.
 
-***Steps:***
+**Steps:**
 
 1. Click on the Dashboards Home.See below snapshot for reference:
 
@@ -156,7 +156,7 @@ To create a Prometheus data source in Grafana follow below steps:
  ![](_images/prometheus-configuration-success.png)
   
 
-###  Creating a Prometheus graph
+### Creating a Prometheus graph
 
 Now Prometheus Data Source is configured, we can create a dashboard showing stats about the Prometheus monitoring metrics for MariaDB Server.
 
