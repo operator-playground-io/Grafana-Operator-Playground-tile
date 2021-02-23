@@ -1,17 +1,15 @@
 ---
-title: Grafana Operator cleanup Tutorial
-description: This tutorial explains how to cleanup the Operator
+title: Grafana Operator Cleanup
+description: Learn how to cleanup the Operator
 ---
 
 
-### Cleaning Up Operator
+### Operator Cleanup
 
 
 
-**Delete the operator's Custom Resources by using `kubectl delete` commands as below :**
+**Step 1: Delete the operator's Custom Resources by using `kubectl delete` commands as below :**
 
- 
-Example:
  
  ```execute
  kubectl delete -f GrafanaInstance.yaml -n my-grafana-operator
@@ -27,7 +25,7 @@ Example:
  
 
 
-***Delete the operator by kubectl delete command:***
+**Step 2: Delete the operator by using `kubectl delete` command followed by target link as below :***
  
  
  Example:
@@ -38,29 +36,26 @@ Example:
  kubectl delete -f https://operatorhub.io/install/mariadb-operator-app.yaml
  ```
  
-***Deleting the CSV resource ***
+**Step 3: Delete the CSV resource. **
 
-- Find the Prometheus CSV in the namespace "Operators"
+  **Step 3.1: Find the Prometheus CSV in the namespace "Operators" using below command.**
 
-Example:
+  
+  ```
+   kubectl get csv -n operators
+  ```
 
-```
-kubectl get csv -n operators
-```
+ **Step 3.2: Delete the CSV.**
 
-- Delete that CSV :
 
-Example:
+  ```
+   kubectl delete csv/prometheusoperator.0.37.0 -n operators
+  ```
 
-```
-kubectl delete csv/prometheusoperator.0.37.0 -n operators
-```
-
-Note: The csv value may be different from above value.In the above delete csv command,Use the csv retrived by kubectl get csv command.  
+Note: The csv value may be different from above value. In the above `delete csv` command, use the csv retrieved from `kubectl get csv` command. 
  
-***Delete all the yaml files:***
+**Step 4: Delete all the yaml files.**
  
- Example:
  
  ```execute
  rm -rf GrafanaInstance.yaml
@@ -72,5 +67,6 @@ Note: The csv value may be different from above value.In the above delete csv co
  rm -rf ServiceMonitor.yaml 
  rm -rf prometheus-datasources.yaml
 ```
-  
+
+**Conclusion: We have now successfully cleaned up the operator from cluster namespace.**
 
