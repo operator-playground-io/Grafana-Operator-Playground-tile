@@ -36,7 +36,7 @@ spec:
 EOF
 ```
 
-**Step 2: Execute the command below to create your Grafana instance.
+**Step 2: Execute the command below to create your Grafana instance.**
 
 ```execute
 kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
@@ -64,7 +64,8 @@ grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
 grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ```
 
-###  Create Grafana Service of type NodePort 
+### Create Grafana Service of type NodePort 
+
 
 **Step 1: First, create the yaml definition as below.
 
@@ -110,7 +111,7 @@ grafana-svc                NodePort    10.101.178.187   <none>        3000:30200
 
 From above, we can see the output NodePort is `30200`.
 
-**Step 4: Click on http://##DNS.ip##:30200 to access your Grafana dashboard. 
+**Step 4: Click on http://##DNS.ip##:30200 to access your Grafana dashboard.** 
 
 
 The Grafana page will load as shown below. 
@@ -137,3 +138,4 @@ The dashboard will now appear as follows.
 ![](_images/dashboard.png)
 
 
+**Conclusion: Now we are able to access Grafana Dashboard to check monitoring metrics.**
