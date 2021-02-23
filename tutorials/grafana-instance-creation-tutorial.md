@@ -1,9 +1,11 @@
 ---
-title: Grafana Instance Creation tutorial
-description: This tutorial explains how create Instances for your Grafana Operator.
+title: Grafana Instance Creation 
+description: This tutorial explains how to create instances of your Grafana Operator
 ---
 
-###  Create below yaml definition of the Custom Resource to create Grafana Instance
+###  Create Grafana Instance.
+
+**Step 1: First, create the yaml definition of the Custom Resource as below.**
 
 ```execute
 cat <<'EOF' > GrafanaInstance.yaml
@@ -34,7 +36,7 @@ spec:
 EOF
 ```
 
-Execute below command to create Grafana instance:
+**Step 2: Execute the command below to create your Grafana instance.
 
 ```execute
 kubectl create -f GrafanaInstance.yaml -n my-grafana-operator
@@ -45,16 +47,16 @@ You will see the following resources created:
 grafana.integreatly.org/example-grafana created
 ```
 
-Please wait till Pod STATUS will be "Running" and then proceed further.
+**Step 3: Wait till Pod STATUS is "Running", then proceed.**
 
 
-Check pods status:
+**Step 4: Check the pod status.**
 
 ```execute
 kubectl get pods -n my-grafana-operator
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                                  READY   STATUS    RESTARTS   AGE
@@ -62,8 +64,9 @@ grafana-deployment-549c685ddc-b6dq7   1/1     Running   0          83s
 grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ```
 
-###  Create below yaml definition of the Custom Resource to create Grafana Service of type NodePort
+###  Create Grafana Service of type NodePort 
 
+**Step 1: First, create the yaml definition as below.
 
 ```execute
 cat <<'EOF' > GrafanaService.yaml
@@ -84,19 +87,19 @@ spec:
 EOF
 ```
 
-Execute below command to create Grafana Service:
+**Step 2: Execute the command below to create your Grafana Service.**
 
 ```execute
 kubectl create -f GrafanaService.yaml -n my-grafana-operator
 ```
 
-Find the port for NodePort service using below command :
+**Step 3: Find the port for `NodePort` service using the following command.**
 
 ```execute
 kubectl get svc -n my-grafana-operator
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
@@ -105,22 +108,22 @@ grafana-service            ClusterIP   10.103.93.116    <none>        3000/TCP  
 grafana-svc                NodePort    10.101.178.187   <none>        3000:30200/TCP   3s
 ```
 
-From above output NodePort is : 30200
+From above, we can see the output NodePort is `30200`.
 
-Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard. 
+**Step 4: Click on http://##DNS.ip##:30200 to access your Grafana dashboard. 
 
 
-You will see the Grafana page loading as below :
+The Grafana page will load as shown below. 
 
 ![](_images/load.png)
 
-Now click on the `Sign In` button as below :
+**Step 5: Now click on the Sign In button as below.**
 
 
 ![](_images/signin.png)
 
 
-Log-in to Grafana Dashboard with the following credentials:
+**Step 6: Log into Grafana dashboard with the following credentials.**
 
 ```
 user: root
@@ -129,7 +132,7 @@ password: secret
 
 ![](_images/login.png)
 
-Now you will be able to see the Dashboard like below:
+The dashboard will now appear as follows.
 
 ![](_images/dashboard.png)
 
