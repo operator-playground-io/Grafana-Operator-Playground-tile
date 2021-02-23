@@ -30,7 +30,7 @@ You can ignore these steps if you already have MariaDB operator installed and ha
 kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml             
 ```
 
-- **After installation, use the following command to verify that your operator has been successfully installed.**
+ - **After installation, use the following command to verify that your operator has been successfully installed.**
 
 
 ```execute
@@ -49,7 +49,7 @@ Note: Once operator is successfully installed, Output PHASE should be as "Succee
 
 
 
-**Check the Pod status using the command below.**
+ - **Check the Pod status using the command below.**
 
 
 ```execute
@@ -69,7 +69,7 @@ Note: In above output, we see the STATUS is "Running" which means that the pods 
 **Step 2: Create MariaDB Server instance and a ` test-db` database along with user details.**
 
  
- **Create the below yaml definition of the Custom Resource.**  
+  - **Create the below yaml definition of the Custom Resource.**  
 
 ```execute
 cat <<'EOF' > MariaDBserver.yaml
@@ -104,7 +104,7 @@ spec:
 EOF
 ```
 
-**Execute below command to create an instance of MariaDBserver using the above yaml definition:**
+ - **Execute below command to create an instance of MariaDBserver using the above yaml definition:**
 
 ```execute
 kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app 
@@ -116,13 +116,13 @@ Output:
 mariadb.mariadb.persistentsys/mariadb created
 ```
 
-**Check the Pods status.**
+ - **Check the Pods status.**
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-**Wait until the STATUS of Pods is "Running".**
+- **Wait until the STATUS of Pods is "Running".**
 
 You will see a similar output as below:
 
@@ -235,7 +235,7 @@ exit
 **Step 4: Enable monitoring service for MariaDB Server.**
 
 
-- **Find the services of MariaDB using below command.**
+ - **Find the services of MariaDB using below command.**
   
   ```execute
   kubectl get svc -n my-mariadb-operator-app
