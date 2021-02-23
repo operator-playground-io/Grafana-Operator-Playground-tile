@@ -1,27 +1,23 @@
 ---
 title: Prometheus Monitoring
-description: This tutorial explains how Prometheus monitors targets/endpoints
+description: This tutorial explains how Prometheus can be used to monitor the targets/endpoints.
 ---
 
 ### Monitoring using Prometheus and Grafana 
 
 
-Prometheus is designed to monitor targets. Servers, databases, standalone virtual machines etc can be monitored with Prometheus.
+Prometheus is designed to monitor the targets including servers, databases, standalone virtual machines, etc.
 
-Prometheus monitoring feature :
+*** Features of Prometheus***
+-	Prometheus is a pull-based monitoring system.
+-	It actively screens the targets to fetch the corresponding metrics.
+-	It periodically scraps the target systems while monitoring.
+-	It usually retrieves the metrics via HTTP calls to the endpoints defined in the Prometheus configuration file.
 
-- Prometheus is a pull based monitoring system.
+Let’s take the example of MariaDB server and see how Prometheus performs the monitoring. We will also explore the obtained metrics on Grafana dashboard. 
+ 
 
-- Prometheus actively screens targets in order to retrieve metrics from them.
-
-- In order to monitor systems, Prometheus will periodically scrap them.
-
-- Prometheus expects to retrieve metrics via HTTP calls done to endpoints that are defined in Prometheus configuration.
-
-
-Lets take the example of MariaDB Server. Here, we will explain the monitoring of MariaDB Sever using Prometheus and how we can check these metrics on Grafana dashboard. 
-
-### How to monitor MariaDB server using Prometheus 
+### Monitoring MariaDB server using Prometheus
 
 Step 1:  Install the MariaDB operator and MariaDB Server Instance by following below Step 1 and Step 2. 
 If you already have MariaDB Operator installed and created MariaDB Server instance, you can skip with Step 1 and Step 2.
