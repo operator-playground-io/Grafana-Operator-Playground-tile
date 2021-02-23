@@ -30,7 +30,7 @@ You can ignore these steps if you already have MariaDB operator installed and ha
 kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml             
 ```
 
-**After installation, use the following command to verify that your operator has been successfully installed.**
+**- After installation, use the following command to verify that your operator has been successfully installed.**
 
 
 ```execute
