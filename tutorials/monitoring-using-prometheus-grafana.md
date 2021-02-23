@@ -29,7 +29,7 @@ You can ignore these steps if you already have MariaDB operator installed and ha
 kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml             
 ```
 
-**Step 1.1: After installation, use the following command to verify that your operator has been successfully installed.**
+**After installation, use the following command to verify that your operator has been successfully installed.**
 
 
 ```execute
@@ -48,7 +48,7 @@ Note: Once operator is successfully installed, Output PHASE should be as "Succee
 
 
 
-**Step 1.2: Check the pod status using the command below.**
+**Check the Pod status using the command below.**
 
 
 ```execute
@@ -65,7 +65,10 @@ mariadb-operator-f96ddc69f-d5vgr   1/1     Running   0          100s
 Note: In above output, we see the STATUS is "Running" which means that the pods are up and running.
 
 
-**Step 2: Create the below yaml definition of the Custom Resource to create MariaDB Server instance and a ` test-db` database along with user details.
+**Step 2: Create MariaDB Server instance and a ` test-db` database along with user details.**
+
+ 
+ **Create the below yaml definition of the Custom Resource.**  
 
 ```execute
 cat <<'EOF' > MariaDBserver.yaml
@@ -112,13 +115,13 @@ Output:
 mariadb.mariadb.persistentsys/mariadb created
 ```
 
-**Step Check the pods status.**
+**Check the Pods status.**
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-**Step Wait until the STATUS of pods is "Running".**
+**Wait until the STATUS of Pods is "Running".**
 
 You will see a similar Output as below:
 
@@ -131,7 +134,7 @@ mariadb-server-5dccfb7b59-rwzqp    1/1     Running   0          10m
 
 **Step 3 : Access MariaDB Database.** 
 
-- Connect to the MariaDB Server pod.
+- Connect to the MariaDB Server Pod.
 
  - Copy the command below to the terminal, and add the podname of MariaDB Server Instance.
     
@@ -221,23 +224,23 @@ select * from Population;
 exit
 ```
 
-- Exit from pod :
+- Exit from Pod :
 
 ```execute
 exit
 ```
 
 
-Step 4: Enable monitoring service for MariaDB Server.
+**Step 4: Enable monitoring service for MariaDB Server.**
 
 
-- Execute below command to get services of MariadB:
+- **Find the services of MariaDB using below command.**
   
   ```execute
   kubectl get svc -n my-mariadb-operator-app
   ```
 
- You will see a similar Output as below:
+ You will see a similar output as below:
  
  ```
       NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
@@ -245,11 +248,11 @@ Step 4: Enable monitoring service for MariaDB Server.
  mariadb-service            NodePort    10.106.178.202   <none>        80:30685/TCP        3d4h
  ```
  
-- Get the port of mariadb-service :
+- **Get the port of mariadb-service.**
   
-  From above command output, mariadb-service port is 30685 
+  From above command output, mariadb-service port is `30685`. 
 
-- To enable monitoring using Prometheus exporter pod and service, create the below yaml definition of the Custom Resource:
+- **Create the below yaml definition of the Custom Resource to enable monitoring using Prometheus exporter pod and service.**
 
 ```execute
 cat <<'EOF'> MariaDBmonitoring.yaml
@@ -267,13 +270,13 @@ spec:
   # Image name with version
   # Refer https://registry.hub.docker.com/r/prom/mysqld-exporter for more details
   image: "prom/mysqld-exporter"
-EOF
+EOFExecute below command to create an instance of MariaDBserver using the above yaml definition
 ```
 
 Note: The database host and port should be correct for metrics to work. Host will be IP of the Cluster and the port will be mariadb-service port(see Step 4).
 
 
-- Execute below command to Create Instance of Monitoring 
+- **Execute below command to create an instance of Monitoring using the above yaml definition.** 
 
 ```execute
 kubectl create -f MariaDBmonitoring.yaml -n my-mariadb-operator-app
@@ -290,14 +293,14 @@ This will start Prometheus exporter pod and service.
 
 
 
-- Check pods status :
+- **Check the pods status.**
 
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                                          READY   STATUS    RESTARTS   AGE
@@ -309,9 +312,9 @@ mariadb-server-5dccfb7b59-rwzqp               1/1     Running   0          16m
 
 ### Install Prometheus Operator and Create Instance of Prometheus Server and ServiceMonitor
 
-Step 5: If you have already installed Prometheus Operator and Created Instance of Prometheus Server and ServiceMonitor, you can skip this Step 5 else proceed with Step 5.
+Note: Ignore below step (Step 5) if you have already installed Prometheus operator and created the instance of Prometheus Server and ServiceMonitor.
 
-- Install the Prometheus operator by running the following command:
+**Step 5: Install the Prometheus operator by running the following command.**
 
 ```execute
 kubectl create -f https://operatorhub.io/install/prometheus.yaml
@@ -323,33 +326,33 @@ Output:
 subscription.operators.coreos.com/my-prometheus created
 ```
 
-This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
+Note: This Operator will be installed in the "operators" namespace and will be usable from all namespaces in the cluster.
 
 
-- After Operator installation, verify that your operator got successfully installed by executing the below command :
+- Execute below command to verify that your operator has been installed successfully.
 
 ```execute
 kubectl get csv -n operators
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                        DISPLAY               VERSION   REPLACES                    PHASE
 prometheusoperator.0.37.0   Prometheus Operator   0.37.0    prometheusoperator.0.32.0   Succeeded
 ```
 
-Note:Please wait till PHASE status will be "Succeeded" and then proceed further.
+Note: Please wait for the PHASE status to be "Succeeded", then proceed.
+In the above output, PHASE status "Succeeded" shows that the operator has been successfully installed.
 
-From above output, once operator is successfully installed, **PHASE** will be as "Succeeded" 
 
-- Check the Pods status using below command:
+- Check the Pods status using below command.
 
 ```execute
 kubectl get pods -n operators
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -359,12 +362,11 @@ prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          8m35s
 In above output, STATUS as "Running" shows the pods are up and running.
 
 
-If you are installing from operatorhub, then by default it installs the operator in operators namespace.
-Below steps assumes that its deployed in operators namespace.
+Note:If you are installing from operatorhub, then by default it installs the operator in the operators namespace. Below steps assume that it’s deployed in the operators namespace.
 
 
 
-- Create below yaml definition of the Custom Resource to create a Prometheus Instance along with a ServiceAccount and a Service of Type NodePort :
+- Create the below yaml definition of the Custom Resource to create a Prometheus Instance along with a ServiceAccount and a Service of type NodePort 
 
 
 ```execute
@@ -392,7 +394,7 @@ EOF
 ```
 
 
-- Execute below command to create Prometheus instance:
+- Execute below command to create Prometheus instance.
 
 
 
@@ -406,13 +408,13 @@ Output:
 prometheus.monitoring.coreos.com/server created
 ```
 
-- Get the associated Pods:
+- Get the associated Pods.
 
 ```execute
 kubectl get pods -n operators
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -420,10 +422,10 @@ prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          14m
 prometheus-server-0                    3/3     Running   1          40s
 ```
 
-Note: Please wait till Pod STATUS will be "Running" and then proceed further.
+Note: Wait until the STATUS of Pods is "Running".
 
 
-- Create below yaml definition of the Custom Resource to create the service NodePort to access prometheus server:
+- Create below yaml definition of the custom resource to create the service NodePort to access prometheus server.
 
 
 ```execute
@@ -445,7 +447,7 @@ spec:
 EOF
 ```
 
-- Execute below command to create Prometheus Service:
+- Execute below command to create Prometheus Service.
 
 ```execute
 kubectl create -f prometheus_service.yaml -n operators
@@ -458,7 +460,7 @@ service/prometheus created
 ```
 
 
-- Create below yaml definition of the Custom Resource to create Instance of ServiceMonitor:
+- Create below yaml definition of the Custom Resource to create Instance of ServiceMonitor.
 
 
 ```execute
@@ -483,7 +485,7 @@ EOF
 ```
 
 
-- Execute below command to create ServiceMonitor instance :
+- Execute below command to create an instance of ServiceMonitor.
 
 
 ```execute
@@ -497,13 +499,13 @@ servicemonitor.monitoring.coreos.com/mariadb-monitor created
 ```
 
 
-- Get the associated Pods:
+- Get the associated Pods.
 
 ```execute
 kubectl get pods -n operators
 ```
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                                   READY   STATUS    RESTARTS   AGE
@@ -513,7 +515,7 @@ prometheus-server-0                    3/3     Running   1          5m40s
 
 
 
-Step 6 : Access the Prometheus dashboard using below link:
+**Step 6 : Access the Prometheus dashboard using below link.**
 
 http://##DNS.ip##:30100
 
@@ -534,15 +536,16 @@ http://##DNS.ip##:30100
 
 
 
-### Install Grafana Operator and create Grafana Instance and Grafana NodePort Service
+### Install Grafana Operator and create Grafana Instance and Grafana Service of type NodePort 
+
+Note: If you have already installed Grafana Operator and have created Grafana Instance and Service, you can skip below Step(Step 7).If not,proceed with below step.
+
+**Step 7 : Install the Grafana Operator and create Grafana Instance.** 
+
+Use the `Install` button of Grafana Tutorial to install the Grafana Operator and "Grafana Instance Creation" tutorial to create Grafana Instance.
 
 
-Step 7 : If you have already installed with Grafana Operator and created Grafana Instance and Service, you can skip this Step 7, else refer the "Grafana Instance Creation" tutorial.
-
-
-
-
-Step 8: Create the below yaml definition of the Custom Resource to create Instance of Grafana Datasources :
+**Step 8: Create the below yaml definition of the custom resource to create Instance of Grafana Datasource.**
 
 ```execute
 cat <<'EOF' > prometheus-datasources.yaml
@@ -565,10 +568,10 @@ spec:
 EOF
 ```
 
-Here we are choosing Prometheus as our datasourse.
+Here we are choosing Prometheus as our Data source.
 
 
-Execute below command to create an instance of Grafana datasourse using the above yaml definition:
+- Execute below command to create an instance of Grafana datasourse using the above yaml definition.
 
 
 ```execute
@@ -581,7 +584,7 @@ Output:
 grafanadatasource.integreatly.org/prometheus-grafanadatasource created
 ```
 
-Step 9 :Access and Configure Grafana dashboard via Grafana UI
+**Step 9 :Access and Configure Grafana dashboard via Grafana UI.**
 
 
 - Execute below command to get all services in "my-grafana-operator" namespace:
@@ -592,7 +595,7 @@ kubectl get svc -n my-grafana-operator
 ```
 
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 
 ```
@@ -619,7 +622,7 @@ Now click on the `Sign In` button as below :
 ![](_images/signin.png)
 
 
-You will now need to log in to Grafana Dashboard with the following credentials in the page below:
+You will now need to log in to Grafana Dashboard with the following credentials:
 
 
 ```
@@ -639,7 +642,7 @@ Now you will be able to see the Dashboard like below:
 
 ### Configure Grafana Dashboard to visualise MariaDB monitoring metrics
 
-Learn how to Configure Grafana Dashboard to visualise MariaDB monitoring metrics from this tutorial: "Grafana Dashboard". 
+“Grafana Dashboard” tutorial provides details showing how to configure Grafana dashboard so you can visualize MariaDB monitoring metrics.
 
 
 
