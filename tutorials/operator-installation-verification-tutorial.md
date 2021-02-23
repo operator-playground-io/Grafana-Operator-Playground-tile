@@ -1,6 +1,6 @@
 ---
 title: Grafana Operator Installation Verification Tutorial
-description: This tutorial explains how to verify that the Grafana Operator got installed properly in the namespace
+description: This tutorial explains how to verify that the Grafana Operator has been properly installed in the namespace
 ---
 
 ### Check the Grafana Operator 
