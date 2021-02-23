@@ -36,7 +36,8 @@ description: Learn how to cleanup the Operator
  kubectl delete -f https://operatorhub.io/install/mariadb-operator-app.yaml
  ```
  
-**Step 3: Delete the CSV resource. **
+ **Step 3: Delete the CSV resource.**
+ 
 
   **Step 3.1: Find the Prometheus CSV in the namespace "Operators" using below command.**
 
