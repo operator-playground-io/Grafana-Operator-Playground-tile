@@ -1,5 +1,5 @@
 ---
-title: Prometheus Monitoring
+title: Prometheus and Grafana monitoring
 description: This tutorial explains how Prometheus can be used to monitor the targets/endpoints and check metrics on Grafana dashboard.
 ---
 
