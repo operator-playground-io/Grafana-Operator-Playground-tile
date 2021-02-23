@@ -8,7 +8,7 @@ description: This tutorial explains how Prometheus can be used to monitor the ta
 
 Prometheus is designed to monitor the targets including servers, databases, standalone virtual machines, etc.
 
-*** Features of Prometheus***
+**Features of Prometheus**
 -	Prometheus is a pull-based monitoring system.
 -	It actively screens the targets to fetch the corresponding metrics.
 -	It periodically scraps the target systems while monitoring.
@@ -19,24 +19,25 @@ Let’s take the example of MariaDB server and see how Prometheus performs the m
 
 ### Monitoring MariaDB server using Prometheus
 
-Step 1:  Install the MariaDB operator and MariaDB Server Instance by following below Step 1 and Step 2. 
-If you already have MariaDB Operator installed and created MariaDB Server instance, you can skip with Step 1 and Step 2.
+To monitor the MariaDB server using Prometheus, you need to first install the MariaDB operator and MariaDB server instance by following Step 1 and Step 2 as below. 
+You can ignore these steps if you already have MariaDB operator installed and have created the MariaDB Server instance.
 
-Install the MariaDB operator by running the following command:
+
+**Step 1: Install the MariaDB operator by running the following command.**
 
 ```execute
 kubectl create -f https://operatorhub.io/install/mariadb-operator-app.yaml             
 ```
 
-- After installation, verify that your operator got successfully installed by executing the below command:
+**Step 1.1: After installation, use the following command to verify that your operator has been successfully installed.**
 
 
 ```execute
 kubectl get csv -n my-mariadb-operator-app
 ```
-Note: Please wait till PHASE status will be "Succeeded" and then proceed further.
+Please wait until the PHASE status is "Succeeded", then proceed.
 
-You will see a similar Output as below:
+You will see a similar output as below:
 
 ```
 NAME                      DISPLAY            VERSION   REPLACES                  PHASE
@@ -47,7 +48,7 @@ Note: Once operator is successfully installed, Output PHASE should be as "Succee
 
 
 
-- Check the Pods status using below command:
+**Step 1.2: Check the pod status using the command below.**
 
 
 ```execute
@@ -61,10 +62,10 @@ NAME                               READY   STATUS    RESTARTS   AGE
 mariadb-operator-f96ddc69f-d5vgr   1/1     Running   0          100s
 ```
 
-Note: In above output, STATUS as "Running" shows the pods are up and running.
+Note: In above output, we see the STATUS is "Running" which means that the pods are up and running.
 
 
-Step 2: Create below yaml definition of the Custom Resource to create MariaDB Server Instance and database called test-db along with user credentials:
+**Step 2: Create the below yaml definition of the Custom Resource to create MariaDB Server instance and a ` test-db` database along with user details.
 
 ```execute
 cat <<'EOF' > MariaDBserver.yaml
@@ -99,7 +100,7 @@ spec:
 EOF
 ```
 
-- Execute below command to create an instance of MariaDBserver using the above yaml definition:
+**Execute below command to create an instance of MariaDBserver using the above yaml definition:**
 
 ```execute
 kubectl create -f MariaDBserver.yaml -n my-mariadb-operator-app 
@@ -111,12 +112,13 @@ Output:
 mariadb.mariadb.persistentsys/mariadb created
 ```
 
-- Check pods status :
+**Step Check the pods status.**
 
 ```execute
 kubectl get pods -n my-mariadb-operator-app
 ```
-Wait till the STATUS of pods are "Running".
+
+**Step Wait until the STATUS of pods is "Running".**
 
 You will see a similar Output as below:
 
@@ -127,11 +129,11 @@ mariadb-server-5dccfb7b59-rwzqp    1/1     Running   0          10m
 ```
 
 
-Step 3 : Access MariaDB Database. 
+**Step 3 : Access MariaDB Database.** 
 
-- Connect to MariaDB Server pod.
+- Connect to the MariaDB Server pod.
 
- - Copy below command to the terminal,add the podname of MariaDB Server Instance.
+ - Copy the command below to the terminal, and add the podname of MariaDB Server Instance.
     
 ```copycommand
  kubectl exec -it <podname> bash -n my-mariadb-operator-app
@@ -146,14 +148,14 @@ Step 3 : Access MariaDB Database.
  ```
 
 
-- list database
+- List the database
 
 ```execute
 show databases;
 ```
 
 
-- exit the database.
+- Exit the database.
 
 
 ```execute
@@ -161,34 +163,34 @@ exit
 ```
 
 
-- To login through root user use below command:
+- Use the command below to login as root user.
 
 
 ```execute
 mysql -h ##DNS.ip## -P 30685 -u root -ppassword
 ```
 
-- Create database testdb
+- Create the ‘testdb’ database.
 
 ```execute
 create database testdb;
 ```
 
 
-- Use the testdb to create some table 
+- Use the testdb to create a table 
 
 ```execute
 use testdb;
 ```
 
 
-- Create table 
+- Create a table 
 
 ```execute
 create table Population(year numeric,population numeric);
 ```
 
-- Insert data into the table so that we can check MariaDB mySQL metrics from Grafana Dashboard.
+- Insert the data values into the table so you can check MariaDB mySQL metrics from Grafana dashboard.
 
 ```execute
 insert into Population values(2017,1380004385 );
