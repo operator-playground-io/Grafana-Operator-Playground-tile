@@ -515,22 +515,16 @@ prometheus-server-0                    3/3     Running   1          5m40s
 
 
 
-**Step 6 : Access the Prometheus dashboard using below link.**
-
-http://##DNS.ip##:30100
+**Step 6 : Access the Prometheus dashboard using the link http://##DNS.ip##:30100**
 
 ![](_images/prom.png)
 
-
-- On the prometheus UI, Go to Status -> Targets to see endpoints.
-
+On the prometheus UI, 
+- Go to Status->Targets to see the endpoints
 
  ![](_images/targetsmariadb.PNG)
 
-
-
-- From the dropdown you can select the query and click on "Execute" to see MariaDB Metrics. See below snapshot :
-
+- Select the query from the dropdown list, and click on “Execute” to check MariaDB metrics. (See the sample snapshot below)
 
 ![](_images/queryexecution.PNG)
 
@@ -568,10 +562,10 @@ spec:
 EOF
 ```
 
-Here we are choosing Prometheus as our Data source.
+Here we are choosing Prometheus as our Datasource.
 
 
-- Execute below command to create an instance of Grafana datasourse using the above yaml definition.
+- **Execute below command to create an instance of Grafana Datasource using the above yaml definition.**
 
 
 ```execute
@@ -584,16 +578,15 @@ Output:
 grafanadatasource.integreatly.org/prometheus-grafanadatasource created
 ```
 
-**Step 9 :Access and Configure Grafana dashboard via Grafana UI.**
+**Step 9: Access and Configure Grafana dashboard via Grafana UI.**
 
 
-- Execute below command to get all services in "my-grafana-operator" namespace:
+  -**Find all the services in "my-grafana-operator" namespace using below command.**
 
 
 ```execute
 kubectl get svc -n my-grafana-operator
 ```
-
 
 You will see a similar output as below:
 
@@ -605,24 +598,25 @@ grafana-service            ClusterIP   10.105.85.60     <none>        3000/TCP  
 grafana-svc                NodePort    10.109.242.171   <none>        3000:30200/TCP   7s
 ```
 
-"grafana-svc" PORT is : 30200
-
-Click on the <a href="http://##DNS.ip##:30200" target="_blank">http://##DNS.ip##:30200</a> to access Grafana Dashboard.
+From above, we can see the output `grafana-svc` NodePort is `30200`.
 
 
-You will see the Grafana page loading as below :
+Click on http://##DNS.ip##:30200 to access your Grafana dashboard.
+
+
+The Grafana page will load as shown below. 
 
 
 ![](_images/load.png)
 
 
-Now click on the `Sign In` button as below :
+Now click on the Sign In button as below.
 
 
 ![](_images/signin.png)
 
 
-You will now need to log in to Grafana Dashboard with the following credentials:
+Log into Grafana dashboard with the following credentials.
 
 
 ```
@@ -633,7 +627,7 @@ password: secret
 ![](_images/login.png)
 
 
-Now you will be able to see the Dashboard like below:
+The dashboard will now appear as follows.
 
 
 ![](_images/dashboard.png)
