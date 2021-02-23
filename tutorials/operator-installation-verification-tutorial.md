@@ -5,7 +5,7 @@ description: This tutorial explains how to verify that the Grafana Operator has 
 
 ### Grafana Operator status verification 
 
-**Step 1: After installation, verify that your operator has been installed successfully by executing below command.**
+**Step 1: Verify that the Grafana Operator has been installed successfully by executing below command.**
 
 ```execute
 kubectl get csv -n my-grafana-operator
@@ -37,3 +37,4 @@ NAME                                READY   STATUS    RESTARTS   AGE
 grafana-operator-7574bbdbc9-skdk8   1/1     Running   0          45s
 ```
 
+Conclusion: This will verify that Grafana Operator has been installed successfully.
