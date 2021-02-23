@@ -39,7 +39,8 @@ description: Learn how to cleanup the Operator
  **Step 3: Delete the CSV resource.**
  
 
-  **Step 3.1: Find the Prometheus CSV in the namespace "Operators" using below command.**
+                  
+   **Step 3.1: Find the Prometheus CSV in the namespace "Operators" using below command.**
 
   
   ```
