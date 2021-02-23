@@ -1,34 +1,38 @@
 ---
-title: Grafana Operator Installation Verification Tutorial
-description: This tutorial explains how to verify that the Grafana Operator has been properly installed in the namespace
+title: Grafana Operator Installation Verification
+description: This tutorial explains how to verify that the Grafana Operator has been properly installed in the namespace.
 ---
 
-### Check the Grafana Operator 
+### Grafana Operator status verification 
 
-After installation, verify that your operator got successfully installed by executing the below command.
+**Step 1: After installation, verify that your operator has been installed successfully by executing below command.**
 
 ```execute
 kubectl get csv -n my-grafana-operator
 ```
 
-You should see a similar output as below.
+You will see a similar output as below.
 
-```output
+Output:
+
+```
 NAME                      DISPLAY            VERSION   REPLACES                  PHASE
 grafana-operator.v3.2.0   Grafana Operator   3.2.0     grafana-operator.v3.0.2   Succeeded
 ```
 
-**Please wait till `PHASE` status will be `Succeeded` and then proceed further.**
+Note: Please wait for the PHASE status to be "Succeeded", then proceed.
 
-After the installation is successful , you can check your operator pods by executing the below command.
+**Step 2: Check the pod status.**
 
 ```execute
 kubectl get pods -n my-grafana-operator
 ```
 
-You should see a pod starting with 'grafana-operator' with Ready value '1/1' and Status 'Running' like the output below.
+You will see a similar output as below.
 
-```output
+Output:
+
+```
 NAME                                READY   STATUS    RESTARTS   AGE
 grafana-operator-7574bbdbc9-skdk8   1/1     Running   0          45s
 ```
