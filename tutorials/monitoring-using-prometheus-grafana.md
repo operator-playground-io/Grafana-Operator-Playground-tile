@@ -1,6 +1,6 @@
 ---
 title: Prometheus Monitoring
-description: This tutorial explains how Prometheus can be used to monitor the targets/endpoints.
+description: This tutorial explains how Prometheus can be used to monitor the targets/endpoints and check metrics on Grafana dashboard.
 ---
 
 ### Monitoring using Prometheus and Grafana 
