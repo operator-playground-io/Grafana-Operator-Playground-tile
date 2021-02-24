@@ -1,15 +1,16 @@
 ---
-title: Grafana Operator Cleanup
-description: Learn how to cleanup the Operator
+title: Grafana Operator cleanup Tutorial
+description: Learn how to cleanup the Grafana Operator
 ---
 
 
-### Operator Cleanup
+### Cleaning Up Operator
 
 
+**Step 1: Delete the operator's Custom Resources by using `kubectl delete` commands as below.**
 
-**Step 1: Delete the operator's Custom Resources by using `kubectl delete` commands as below :**
-
+ 
+Example:
  
  ```execute
  kubectl delete -f GrafanaInstance.yaml -n my-grafana-operator
@@ -24,8 +25,7 @@ description: Learn how to cleanup the Operator
 
  
 
-
-**Step 2: Delete the operator by using `kubectl delete` command followed by target link as below :***
+**Step 2: Delete the operator by using `kubectl delete` command as below.**
  
  
  Example:
@@ -36,25 +36,23 @@ description: Learn how to cleanup the Operator
  kubectl delete -f https://operatorhub.io/install/mariadb-operator-app.yaml
  ```
  
- **Step 3: Delete the CSV resource.**
- 
+**Step 3: Deleting the CSV resource.**
 
-                  
-   **Step 3.1: Find the Prometheus CSV in the namespace "Operators" using below command.**
-
-  
-  ```
-   kubectl get csv -n operators
-  ```
-
- **Step 3.2: Delete the CSV.**
+ **Step 3.1: Find the Prometheus CSV in the namespace "Operators".**
 
 
-  ```
-   kubectl delete csv/prometheusoperator.0.37.0 -n operators
-  ```
+```
+kubectl get csv -n operators
+```
 
-Note: The csv value may be different from above value. In the above `delete csv` command, use the csv retrieved from `kubectl get csv` command. 
+ **Step 3.1: Delete the CSV.**
+
+
+```
+kubectl delete csv/prometheusoperator.0.37.0 -n operators
+```
+
+Note: The csv value may be different from above value. In the above `delete csv` command, use the csv retrieved from `kubectl get csv` command.
  
 **Step 4: Delete all the yaml files.**
  
@@ -69,6 +67,6 @@ Note: The csv value may be different from above value. In the above `delete csv`
  rm -rf ServiceMonitor.yaml 
  rm -rf prometheus-datasources.yaml
 ```
-
-**Conclusion: We have now successfully cleaned up the operator from cluster namespace.**
-
+  
+### Conclusion
+You have successfully cleaned up the Grafana Operator resources.
