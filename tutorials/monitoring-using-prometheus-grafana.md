@@ -515,7 +515,9 @@ prometheus-server-0                    3/3     Running   1          5m40s
 
 
 
-**Step 6 : Access the Prometheus dashboard using the link http://##DNS.ip##:30100**
+**Step 6 : Access the Prometheus dashboard using the below link.**
+
+http://##DNS.ip##:30100
 
 ![](_images/prom.png)
 
