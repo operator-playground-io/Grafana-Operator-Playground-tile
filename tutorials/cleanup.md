@@ -1,6 +1,6 @@
 ---
-title: Grafana Operator cleanup Tutorial
-description: Learn how to cleanup the Grafana Operator
+title: Grafana Operator cleanup. 
+description: Learn how to cleanup the Grafana Operator.
 ---
 
 
