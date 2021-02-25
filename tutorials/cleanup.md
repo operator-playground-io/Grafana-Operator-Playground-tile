@@ -45,7 +45,7 @@ Example:
 kubectl get csv -n operators
 ```
 
- **Step 3.1: Delete the CSV.**
+ **Step 3.2: Delete the CSV.**
 
 
 ```
