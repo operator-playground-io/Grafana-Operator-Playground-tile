@@ -1,6 +1,6 @@
 ---
 title: Grafana Instance Creation 
-description: This tutorial explains how to create instances of your Grafana Operator
+description: Learn how to create instances of your Grafana Operator
 ---
 
 ###  Create Grafana Instance.
@@ -47,10 +47,10 @@ You will see the following resources created:
 grafana.integreatly.org/example-grafana created
 ```
 
-**Step 3: Wait till Pod STATUS is "Running", then proceed.**
+**Wait till Pod STATUS is "Running", then proceed.**
 
 
-**Step 4: Check the pod status.**
+**Step 3: Check the pod status.**
 
 ```execute
 kubectl get pods -n my-grafana-operator
@@ -67,7 +67,7 @@ grafana-operator-7574bbdbc9-skdk8     1/1     Running   0          6m4s
 ### Create Grafana Service of type NodePort 
 
 
-**Step 1: First, create the yaml definition as below.
+**Step 1: First, create the yaml definition as below.**
 
 ```execute
 cat <<'EOF' > GrafanaService.yaml
