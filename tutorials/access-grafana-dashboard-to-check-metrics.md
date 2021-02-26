@@ -1,3 +1,7 @@
+---
+title: Grafana Dashboard to see metrics. 
+description: Learn how to access Grafana Dashboard and configure it to show metrics.
+---
 
 ### Access Grafana Dashboard and configure it to show metrics
 
