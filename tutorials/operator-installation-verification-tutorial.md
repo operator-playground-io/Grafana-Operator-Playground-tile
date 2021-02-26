@@ -1,5 +1,5 @@
 ---
-title: Grafana Operator Installation Verification
+title: Grafana Operator installation verification
 description: This tutorial explains how to verify that the Grafana Operator has been properly installed in the namespace.
 ---
 
@@ -13,7 +13,6 @@ kubectl get csv -n my-grafana-operator
 
 You will see a similar output as below.
 
-Output:
 
 ```
 NAME                      DISPLAY            VERSION   REPLACES                  PHASE
