@@ -362,7 +362,7 @@ prometheus-operator-6f7589ff7f-wq9zd   1/1     Running   0          8m35s
 In above output, STATUS as "Running" shows the pods are up and running.
 
 
-Note:If you are installing from operatorhub, then by default it installs the operator in the operators namespace. Below steps assume that it’s deployed in the operators namespace.
+Note: If you are installing from operatorhub, then by default it installs the operator in the operators namespace. Below steps assume that it’s deployed in the operators namespace.
 
 
 
