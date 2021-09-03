@@ -13,6 +13,7 @@ apiVersion: integreatly.org/v1alpha1
 kind: Grafana
 metadata:
   name: example-grafana
+  namespace: my-grafana-operator
 spec:
   ingress:
     enabled: true
@@ -75,6 +76,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: grafana-svc
+  namespace: my-grafana-operator
 spec:
   type: NodePort
   ports:
